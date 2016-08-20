@@ -10,7 +10,7 @@ npm i --save minvk
 ```JS
 const MinVK = require('minvk');
 const vk = new MinVK({
-  mode:"token",
+  mode:"access_token",
   access_token:"..."
 });
 //OR
