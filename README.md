@@ -9,12 +9,12 @@ npm i --save minvk
 ##Usage
 ```JS
 const MinVK = require('minvk');
-const vk = MinVK({
+const vk = new MinVK({
   mode:"token",
   access_token:"..."
 });
 //OR
-const vk = MinVK({
+const vk = new MinVK({
   mode:"auth",
   username:"...",
   password:"..."
