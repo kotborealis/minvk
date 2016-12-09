@@ -1,6 +1,6 @@
 {
   "name": "minvk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/kotborealis/minvk#readme",
   "dependencies": {
-    "html-entities": "^1.2.0",
     "request": "^2.73.0"
   }
 }
