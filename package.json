@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kotborealis/minvk#readme",
   "dependencies": {
+    "debug": "^2.6.3",
     "request": "^2.73.0"
   }
 }
