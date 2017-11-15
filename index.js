@@ -2,5 +2,5 @@
 
 module.exports = {
     community: require('./lib/community'),
-    user: null
+    user: require('./lib/user')
 };
