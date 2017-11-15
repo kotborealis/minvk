@@ -1,3 +1,6 @@
 'use strict';
 
-module.exports = require('./lib/vk');
+module.exports = {
+    community: require('./lib/community'),
+    user: null
+};
