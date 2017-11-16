@@ -1,40 +1,44 @@
-# minvk
+# minvk 2.0
 Minimalistic NodeJS VK API
 
 ## Installation
 ``
-npm i --save minvk
+npm i minvk
 ``
 
 ##Usage
-```JS
-const MinVK = require('minvk');
-const vk = new MinVK({
-  mode:"access_token",
-  access_token:"..."
-});
-//OR
-const vk = new MinVK({
-  mode:"auth",
-  username:"...",
-  password:"..."
+
+```js
+// Create new instance of vk.community
+const vk = new VK.community({
+    access_token,
+    group_id,
+    confirmation, // confirmation token from vk
+    secret, // secret token from vk
+    port // port of callback server
 });
 
-//Calls method.name with params object
-vk.call("method.name",params,(err,res)=>{});
+// Create new instance of vk.user
+const vk = new VK.user({
+    username,
+    password,
+    // OR
+    access_token
+});
 
-//Starts longPoll
-vk.longPoll((err,res)=>{});
+// Initialize api
+await vk.init();
 
-//Retunrns message attachments by message id
-vk.messageGetAttachments(id,(err,res)=>{});
+// Make vk api call
+await vk.call('messages.send', {/* ... */});
+await vk.call('user.getInfo');
 
-//Uploads image from stream, returns attachment id
-vk.uploadPrivateImage(readableStream,(err,res)=>{});
+// Listen to new messages
+// works for both users and communities!
+vk.on('message_new', (message) => {/* https://vk.com/dev/objects/message */)); // new messages
+vk.on('message_reply', (message) => {/* https://vk.com/dev/objects/message */)); // new replies
 
-//Send message to user/chat with attachments
-vk.sendMessageAuto(text,id,attachments,(err,res)=>{});
-
-//Checks if given id belongs to chat
-vk.isChatId(id);
+// Listen to community events
+vk.on('some_event_from_callback_api', () => false);
 ```
+
