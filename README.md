@@ -6,7 +6,7 @@ Minimalistic NodeJS VK API
 npm i minvk
 ``
 
-##Usage
+## Usage
 
 ```js
 // Create new instance of vk.community
