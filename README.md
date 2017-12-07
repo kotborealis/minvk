@@ -11,10 +11,10 @@ npm i minvk
 ```js
 // Create new instance of vk.community
 const vk = new VK.community({
-    access_token,
-    group_id,
-    confirmation, // confirmation token from vk
-    secret, // secret token from vk
+    access_token, // access_token for community with at least manage and messages rights
+    group_id, // id of group
+    url, // web-hook url
+    server_id, // server id from vk interface
     port // port of callback server
 });
 
@@ -23,7 +23,7 @@ const vk = new VK.user({
     username,
     password,
     // OR
-    access_token
+    access_token // access_token for user
 });
 
 // Initialize api
