@@ -15,7 +15,8 @@ const vk = new VK.community({
     group_id, // id of group
     url, // web-hook url
     server_id, // server id from vk interface
-    port // port of callback server
+    port, // port of callback server
+    confirm // confirm secret
 });
 
 // Create new instance of vk.user
