@@ -16,7 +16,7 @@ const vk = new VK.community({
     url, // web-hook url
     server_id, // server id from vk interface
     port, // port of callback server
-    confirm // confirm secret
+    secret_key // secret key
 });
 
 // Create new instance of vk.user
